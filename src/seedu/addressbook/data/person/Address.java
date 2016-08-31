@@ -56,3 +56,39 @@ public class Address {
         return isPrivate;
     }
 }
+
+class Block {
+	
+	final String value;
+	
+	Block(String block){
+		this.value = block;
+	}
+	
+}
+
+class Street {
+	
+	final String value;
+	
+	Street(String street){
+		this.value = street;
+	}
+}
+
+class Unit {
+	final String value;
+	
+	Unit(String unit){
+		this.value = unit;
+	}
+}
+
+class PostalCode{
+	final String value;
+	
+	PostalCode(String postalCode){
+		this.value = postalCode;
+	}
+	
+}
