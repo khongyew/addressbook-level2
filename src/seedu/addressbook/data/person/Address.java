@@ -11,6 +11,11 @@ public class Address {
     public static final String EXAMPLE = "123, some street";
     public static final String MESSAGE_ADDRESS_CONSTRAINTS = "Person addresses can be in any format";
     public static final String ADDRESS_VALIDATION_REGEX = ".+";
+    
+    public static final int ADDRESS_BLOCK_INDEX = 0;
+    public static final int ADDRESS_STREET_INDEX = 1;
+    public static final int ADDRESS_UNIT_INDEX = 2;
+    public static final int ADDRESS_POSTAL_CODE_INDEX = 3;
 
     //public final String value;
     private Block block;
@@ -32,10 +37,10 @@ public class Address {
         }
         
         String[] addressParts = address.split(", ");
-        this.block = new Block(addressParts[0]);
-        this.street = new Street(addressParts[1]);
-        this.unit = new Unit(addressParts[2]);
-        this.postalCode = new PostalCode(addressParts[3]);
+        this.block = new Block(addressParts[ADDRESS_BLOCK_INDEX]);
+        this.street = new Street(addressParts[ADDRESS_STREET_INDEX]);
+        this.unit = new Unit(addressParts[ADDRESS_UNIT_INDEX]);
+        this.postalCode = new PostalCode(addressParts[ADDRESS_POSTAL_CODE_INDEX]);
         
     }
 
