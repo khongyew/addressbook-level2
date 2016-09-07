@@ -19,4 +19,26 @@ public class Tagging {
 		this.person = person;
 		this.status = status;
 	}
+	
+	public Tag getTag(){
+		return this.tag;
+	}
+	
+	public Person getPerson(){
+		return this.person;
+	}
+	
+	public Status getStatus(){
+		return this.status;
+	}
+	
+	public String toString(){
+		if(this.status == Status.ADDED){
+			return "+ " + this.person.getName().toString() + " [" + this.tag.toString() + "]";
+		}
+		else{
+			return "- " + this.person.getName().toString() + " [" + this.tag.toString() + "]";
+		}
+			
+	}
 }
